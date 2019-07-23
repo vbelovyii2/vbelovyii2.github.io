@@ -60,7 +60,7 @@ function initate(){
             showSnow();
         }
        
-       // window.requestAnimFrame(animate);
+        window.requestAnimFrame(animate);
         
         function createSnow(){
             if (snow.length<400){
@@ -123,7 +123,7 @@ function initate(){
        }
    
         
-setInterval(animates,100);      
+//setInterval(animates,100);      
      /////////////////////////////////// don't touch brackets  
     }
 }
