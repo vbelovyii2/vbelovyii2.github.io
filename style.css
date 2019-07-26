@@ -1,0 +1,227 @@
+/*Регистрируем кастомные свойства(переменные) для изменения во всем приложении*/
+:root{
+    --gr: lightgray; /*Колоры пока что пусть будет так*/
+    --tm: tomato;
+    --bl: lightblue;
+    --gre: lightgreen;
+    --neucha: neucha; /*Стиль шрифта*/
+    --size-menu: 16px; /*Размер шрифта*/
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Обнуляем отступы можно поменять на звездочку конечно или воспользоваться сторонними ресурсами меня устраивает так)))*/
+html, body{
+    padding: 0;
+    margin: 0;
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Регистрируем шрифты*/
+@font-face {
+    font-family: neucha;
+    src: url(Neucha.ttf);
+}
+/*-----------------------------------------------------------------------------------------------------------------------*/
+/*Стилизуем шапку сайта и вложенные элементы*/
+/*Обьявим футер как grid layout */
+header{
+    display: grid;
+    grid-template: 
+        "about about logo logo phone phone" 95px
+        "menus menus menus menus menus menus" 80px/1fr 1fr 1fr 1fr 1fr 1fr ;
+}
+
+.about{
+    grid-area: about;
+    justify-self: center;
+    align-self: center;
+}
+.logo{
+    grid-area: logo;
+    justify-self: center;
+    align-self: center;
+}
+.phone{
+    grid-area: phone;
+    justify-self: center;
+    align-self: center;
+}
+.menus{
+  grid-area: menus;   
+    justify-self: center;
+    align-self: center;
+}
+.menus a{
+    text-decoration: none
+}
+.element-menu{
+    margin-right: 20px;
+    margin-left: -5px;
+}
+/*-----------------------------------------------------------------------------------------------------------------------*/
+/* Что то наподобие слайдера с абсолютно спозиционированной надписью поехали*/
+.slide{
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    height: 750px;
+}
+.first-slide{
+    background-image: url(images/first.jpg);
+    background-size: cover;
+    transition: 3s;
+}
+.second-slide{
+    background-image: url(images/second.jpg);
+    background-size: cover;
+    transition: 3s;
+}
+.third-slide{
+    background-image: url(images/third.jpg);
+    background-size: cover;
+    transition: 3s;
+}
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+.absolute-title{
+    width: 300px;
+    position: absolute;
+    font-family: var(--neucha);
+    font-size: 30px;
+    top: 200px;
+    left: 120px;
+    color: #e315a4;  
+}
+/* ----------------------------------------------------------------------------------------------- -------------*/
+/*стиль для шрифтов*/
+.neucha {
+    font-family: var(--neucha);
+    font-size: var(--size-menu);
+    font-weight: 900;
+   text-transform: uppercase;
+}
+.neucha-m{
+    text-transform: none;
+}
+/*Доставки возвраты гарантии и прочее*/
+main .first-article{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: 280px 100px 100px;
+}
+.first-article img{
+    width: 100%;
+    object-fit: cover;
+}
+.first-article img:first-child{
+    grid-column: 2/3;
+}
+.first-article .ones{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    font-family: var(--neucha);
+    font-size: 30px;
+    justify-self: center;
+    align-self: center;
+    color: gray;
+}
+.first-article .twos{
+    grid-column: 3/4;
+    grid-row: 2/3;
+    font-family: var(--neucha);
+    font-size: 30px;
+     justify-self: center;
+    align-self: center;
+    color: gray;
+}
+.first-article .threes{
+    grid-column: 4/5;
+    grid-row: 2/3;
+    font-family: var(--neucha);
+    font-size: 30px;
+     justify-self: center;
+    align-self: center;
+    color: gray;
+}
+.first-article .fours{
+    grid-column: 5/6;
+    grid-row: 2/3;
+    font-family: var(--neucha);
+    font-size: 30px;
+    justify-self: center;
+    align-self: center;
+    color: gray;
+}
+footer{
+    height: 500px;
+}
+
+.category-main{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-auto-rows: auto;
+}
+.category-main h1{
+    grid-column: 3/12;
+}
+.category-main .filtrs{
+    grid-column: 3/11;
+    background: lightgray;
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+.category-main .sort{
+    grid-column: 3/11;
+    background: lightgray;
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+.category-main .product-menu{
+    grid-column: 3/5;
+    padding-top: 20px;
+    font-size: 40px;
+}
+.category-main .product-items{
+    grid-column: 5/11;
+    background: #f7e9e9;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    grid-auto-rows: 300px;
+    grid-gap: 20px;
+}
+.product-items .product{
+    background: tomato;
+}
+/*-------------------------------------------------------------------------------------------*/
+/*Пояснения удалить потом*/
+.ud1{
+    padding: 200px;
+    border-radius: 50%;
+    position: absolute;
+    background: lightgray;
+    top: 30%;
+    left: 20%;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 40px;
+    display: none;
+    opacity: 0.7;
+}
+.ud2{
+    padding: 200px;
+    border-radius: 50%;
+    position: absolute;
+    background: lightgray;
+    top: 30%;
+    left: 10%;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 40px;
+    display: none;
+    opacity: 0.7;
+}
+.ud3{
+   
+}
+/*----------------------------------------------------------------------------------------------------------*/
