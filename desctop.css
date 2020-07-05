@@ -1,0 +1,56 @@
+.desctop_menu ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.desctop_menu ul li a{
+    text-decoration: none;
+    color: yellow;
+    font-weight: 500;
+}
+.desctop_menu ul li{
+    padding: 20px;
+    cursor: pointer;
+    height: 100%;
+}
+
+
+.desctop_menu{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+
+.desctop_menu ul li:hover{
+    background-color: gray;
+}
+.foot_logo{
+    background-color: rgb(77, 75, 75);
+}
+.foot{
+    text-align: center;
+    color: white;
+}
+.logo{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 300px;
+    z-index: 50;
+}
+span{
+    color: black;
+    font-weight: 700;
+}
+.adress{
+    text-align: center;
+}
+.phone{
+    display: none;
+}

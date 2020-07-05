@@ -1,0 +1,150 @@
+.banner{
+    margin-top: 5%;
+    height: 90vh;
+    background-image: url('banner.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+@media(min-width:1200px){
+    .in_banner:nth-child(2){
+        font-size: 600%;
+        font-weight: 900;
+        color:black;
+        text-shadow: 2px 2px 2px yellow ;
+    }
+    
+    .in_banner:first-child{
+        font-size: 300%;
+        font-weight: 500;
+        color: yellow;
+        text-shadow: 3px 3px 3px black;
+    }
+    .in_banner:last-child {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    .in_banner:last-child div{
+        width: 20%;
+        background-color: yellow;
+        color: black;
+        font-size: 30px;
+        font-weight: 700;
+        transform: skewX(-30deg);
+        border: 2px solid black;
+        
+    }
+    .in_banner:last-child div span{
+        display: block;
+        transform: skewX(30deg);
+      
+    }
+}
+@media(max-width:1199px){
+    .in_banner:nth-child(2){
+        font-size: 40px;
+        font-weight: 900;
+        color:black;
+        text-shadow: 2px 2px 2px yellow ;
+    }
+    
+    .in_banner:first-child{
+        font-size: 20px;
+        font-weight: 500;
+        color: yellow;
+        text-shadow: 3px 3px 3px black;
+    }
+    .in_banner:last-child {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    .in_banner:last-child div{
+        width: 200px;
+        background-color: yellow;
+        color: black;
+        font-size: 20px;
+        font-weight: 700;
+        transform: skewX(-30deg);
+        border: 2px solid black;
+        
+    }
+    .in_banner:last-child div span{
+        display: block;
+        transform: skewX(30deg);
+      
+    }
+}
+
+
+.sub_menu{
+    background-color: black;
+    color: yellow;
+    border-left: 5px solid yellow;
+    
+}
+.sub_menu ul{
+    padding-left: 50px;;
+}
+.product_flex{
+    display: flex;
+    flex-flow: column;
+    
+}
+h1{
+    text-align: center;
+}
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+.product{
+    width: 250px;
+    border: 3px solid black;
+    outline: 3px solid yellow;
+    margin-bottom: 20px;
+    transform: skewX(-3deg);
+}
+.products_main{
+    text-align: center;
+}
+.img img{
+    width: 100%;
+}
+.description{
+    font-size: 25px;
+    color: black;
+    font-weight: 900;
+    transform: skewX(3deg)!important;
+    text-shadow: 1px 1px 1px yellow;
+}
+.price{
+    background: black;
+    color: yellow;
+    font-size: 20px;
+    font-weight: 700;
+}
+.line{
+    border-top: 2px solid yellow;
+    border-bottom: 2px solid black;
+    margin: 10px 0;
+}
+.footer{
+    
+    background-color: black;
+}
+.footer div{
+    color: yellow;
+}
+.footer_one{
+    display: flex;
+    justify-content: flex-end;
+}

@@ -1,4 +1,84 @@
 body{
-    background-image: url('rose.jpg');
-    background-size: cover;
+    
+}
+.example{
+    background-color: yellow;
+}
+.example, .example_one{
+    /*outline: 1px solid white;*/
+    padding: 0;
+}
+.example_one{
+    position: relative;
+    
+}
+.mob-menu{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    display: none;
+    
+}
+.fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: black;
+    color: white;
+}
+.yellow{
+    color: yellow;
+}
+#switcher{
+    position: absolute;
+    left: -9999px;
+    visibility: hidden;
+}
+
+#switcher:checked ~ .example_one .navigation{
+    left: 0;
+    top: 0;
+    
+}
+
+.navigation{
+    position: fixed;
+    width: 80%;
+    height: 50vh;
+    left: -100%;
+    background-color: black;
+    transition: left 0.5s;
+    border: 3px solid yellow;
+    color: yellow;
+    z-index: 60;
+    
+}
+@media(max-width:576px){
+    body{
+        
+    }
+    .mob-menu{
+        display: block;
+    }
+    .example_one{
+        background-color: black;
+    }
+    .desctop{
+        display: none;
+    }
+    .sub_menu{
+        display: none;
+    }
+    .logo{
+        width: 200px!important;
+    }
+    .phone{
+        display: block!important;
+        color: black;
+    }
+    .adress span{
+        display: none;
+    }
+    
 }
